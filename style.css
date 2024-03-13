@@ -274,7 +274,11 @@ a:visited{
     max-width: 300px;
 }
 
-.Project__duration, .Project__user--info, .Project__time_size--info, .Project__tecnology--info{
+.Project__duration, .Project__user--info
+, .Project__time_size--info
+, .Project__tecnology--info
+, .Skills__item--introduction
+, .Work_environment__introduction{
     padding-left: 10px;
 }
 
@@ -330,9 +334,14 @@ a:visited{
 
 .Link{
     display: flex;
-    gap: 10px;
+    gap: 5px;
+    margin-left: 10px;
 }
 
 .Link__name, .Certification__name{
     font-weight: bold;
+}
+
+.Link__href:hover{
+    color: #76ABAE;
 }
