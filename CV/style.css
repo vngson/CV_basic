@@ -148,10 +148,11 @@ a:visited{
 .Profile_Education_Skills, .Other{
     display: flex;
     justify-content: space-between;
+    align-items: start;
     gap: 4%;
 }
 
-.Profile, .Education, .Skill, .Certifications, .Additional_information, .Work_environment {
+.Profile, .Education, .Skills, .Certifications, .Additional_information, .Work_environment {
     display: flex;
     width: 32%;
     flex-direction: column;
