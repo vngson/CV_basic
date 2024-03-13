@@ -1,0 +1,337 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #76ABAE;
+}
+
+a:visited{
+    color: black ;
+}
+
+.App{
+    display: flex;
+    padding: 20px 50px;
+    overflow: hidden;
+}
+
+.Container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Introduction{
+    display: flex;
+    gap: 20px;
+    border: solid 1px #76ABAE;
+    padding: 10px 0;
+}
+
+.Introduction__avt{
+    width: 300px;
+    object-fit: contain;
+    padding: 0 10px;
+    border-right: solid 1px #76ABAE;
+}
+
+.Introduction__info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.Introduction__name--wrapper{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    font-size: 100px;
+    stroke: white;
+    stroke-dasharray: 5% 30%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: #4D163D;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #840037;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #BD0034;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #BD0034;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #FDB731;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+
+.Introduction__major {
+    animation: typing alternate;
+    user-select: none;
+}
+
+
+.Introduction__major {
+    font-size: 40px;
+    color: var(--black);
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    animation-duration: 20s;
+    animation-delay: .1s;
+    animation-timing-function: steps(19, end);
+    animation-iteration-count: infinite;
+}
+
+.Introduction__major::after{
+    content: "|";
+    position: absolute;
+    right: 0;
+    animation: caret infinite;
+    animation-duration: 1s;
+    animation-timing-function: steps(1, end);
+}
+
+@keyframes typing {
+    0%, 50%, 100% {
+        width: 0;
+    }
+    10%, 40% {
+        width: 350px;
+    }
+}
+
+@keyframes caret {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.line {
+    width: 98%;
+    height:1px; 
+    background-color: #76ABAE;
+}
+
+.Introduction__about_me{
+    font-size: 28px;
+}
+
+.Profile_Education_Skills, .Other{
+    display: flex;
+    justify-content: space-between;
+    gap: 4%;
+}
+
+.Profile, .Education, .Skill, .Certifications, .Additional_information, .Work_environment {
+    display: flex;
+    width: 32%;
+    flex-direction: column;
+    padding: 10px 20px 20px 20px;
+    gap: 10px;
+}
+
+/* .Profile__title, .Education__title, .Skills__title{
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    list-style: none;
+    line-height: 40px;
+    text-align: center;
+} */
+
+.Profile__title
+, .Education__title
+, .Skills__title
+, .Projects__title
+, .Certifications__title
+, .Additional_information__title
+, .Work_environment__title{
+    text-align: center;
+    font-size: 40px;
+    margin: 20px auto 0 auto;
+    text-transform: uppercase;
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(45deg, #feac5e, #c779d0, #4bc0c8, #40e0d0, #ff8c00, #ff0080);;
+    -webkit-animation: animation_color 4s ease infinite alternate;
+    -moz-animation: animation_color 4s ease infinite alternate;
+    animation: animation_color 4s ease infinite alternate;
+    width: 100%;
+    border-top: solid 2px #76ABAE;
+    border-bottom: solid 2px #76ABAE;
+    user-select: none;
+}
+
+@keyframes animation_color {
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}
+
+.Profile__item{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.fa{
+    font-size: 20px;
+}
+
+.Profile__item--text{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.Education__school
+, .Skills__item--title
+,.Project__name
+, .Project__my_position--title
+, .Project__my_position--info
+, .Project__tecnology--title
+, .Certification__name{
+    font-size: 20px;
+    padding-left: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.Education__major, .Education__duration, .Education__GPA{
+    padding-left: 10px;
+}
+
+.Skills__item{
+    display: flex;
+    flex-direction: column;
+}
+
+.Profjects{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Project{
+    display: flex;
+    gap: 100px;
+    padding: 0 100px 0 50px;
+    border-left: solid 5px #76ABAE;
+    position: relative;
+}
+
+.circle{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: none ;
+    border-radius: 50%;
+    background-color:#76ABAE;
+    top: -10px;
+    left: -10px;
+}
+
+.Project__introduction{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 300px;
+    max-width: 300px;
+}
+
+.Project__duration, .Project__user--info, .Project__time_size--info, .Project__tecnology--info{
+    padding-left: 10px;
+}
+
+
+.Project__user{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Project__user--title, .Project__time_size--title{
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.Project__time_size{
+    display: flex;
+    gap: 10px;
+}
+
+.Project__detail{
+    display: flex;
+    flex-direction: column;
+}
+
+.Project__my_position{
+    display: flex;
+    flex-direction: column;
+}
+
+.Project__my_responsibility{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Project__tecnology{
+    display: flex;
+    flex-direction: column;
+}
+
+.Certification{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    gap: 10px;
+}
+
+.Certification__time{
+    padding-left: 10px;
+}
+
+.Link{
+    display: flex;
+    gap: 10px;
+}
+
+.Link__name, .Certification__name{
+    font-weight: bold;
+}
